@@ -3,4 +3,4 @@
 This algorithm calculates the similarity between spectral data, based on a binary tree similarity.
 
 
-!(~/pseudAlgo?raw=true)
+!(~/pseudAlgo.png)
