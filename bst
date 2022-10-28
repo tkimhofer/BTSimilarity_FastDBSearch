@@ -1,6 +1,10 @@
 # Hierarchical clustering based on a binary tree similarity
 
-# spec_distance(Xn, ppe, metric='mahalanobis')
+# usage:
+# Xn - spectral matrix (2D np.array, one row per spectrum)
+# x - chemical shift variable (1D np.array)
+
+# spec_distance(Xn, x, metric='cosine')
 
 class Node:
     # defines cutpoints based on y-weighted mean of x values
@@ -166,7 +170,7 @@ class SpecDistance():
     # hierarchical clustering based on binary tree similarity
     def __init__(self, specs, x, depth=4, minle=100, metric='euclidean', linkage='ward', **kwargs):
         # specs: input data with rows representing individual spectra
-        # x: x variables, len(x) == specs.shape[1]
+        # x: x variable, len(x) == specs.shape[1]
         # depth: recursion depth to define x-axis cutpoints (recursion stopping criterion)
         # minle: minimum length of a segment defined by right and left cutpoint (recursion stopping criterion)
         # metric: distance metric (see scipy.spatial.distance, most useful ones are ‘cosine’ and ‘euclidean’)
