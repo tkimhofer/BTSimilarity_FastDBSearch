@@ -51,38 +51,7 @@ class BstSearch():
         self.collect(self.btree)
         self.nodes = pd.DataFrame(self.nData)
 
-    # class Node:
-    #     def callNode(self, x, y, depth, minle):
-    #         self.Node(x=x, y=y, depth=depth - 1, minle=minle)
-    #
-    #     def __init__(self, x, y, depth=4, minle=1000):
-    #         import numpy as np
-    #
-    #         def wMean(x, y):
-    #             wm = np.sum((y / np.sum(y)) * x)
-    #             iwm = np.argmin(np.abs(wm - x))
-    #             return (wm, iwm)
-    #
-    #         # stop criteria parameters
-    #         self.len = len(x)
-    #         self.depth = depth
-    #
-    #         self.y = y
-    #         self.x = x
-    #         self.wmean, self.icent = wMean(self.x, self.y)
-    #
-    #         y_le = y[self.icent:]
-    #         x_le = x[self.icent:]
-    #
-    #         y_ri = y[:(self.icent - 1)]
-    #         x_ri = x[:(self.icent - 1)]
-    #
-    #         # recursion
-    #         if depth > 1:
-    #             if len(y_le) > minle:
-    #                 self.left = self.callNode(x=x_le, y=y_le, depth=depth - 1, minle=minle)
-    #             if len(y_ri) > minle:
-    #                 self.right = self.callNode(x=x_ri, y=y_ri, depth=depth - 1, minle=minle)
+    
     def collect(self, btree, dir_par='root', c='0'):
         # traverse btree to collect weighted means
         # collect depth value, right or left and wmean (cutpoints)
